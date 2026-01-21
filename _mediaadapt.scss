@@ -1,0 +1,56 @@
+@media (max-width: 768px) {
+    .topbar {
+        padding: 8px 15px;
+    }
+    
+    button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        left: 15px;
+        top: 15px;
+    }
+    
+    .content {
+        margin-top: 40px; /* Adjust for smaller topbar on tablets */
+        padding: 15px;
+        flex-direction: column;
+    }
+    
+    .recipe {
+        padding-right: 0;
+    }
+    
+    .notes {
+        padding-left: 0;
+        border-left: none;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .topbar {
+        padding: 5px 10px;
+    }
+    
+    button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        left: 10px;
+        top: 10px;
+    }
+    
+    .content {
+        margin-top: 30px; /* Adjust for smaller topbar on mobile */
+        padding: 10px;
+        flex-direction: column;
+    }
+    
+    .recipe {
+        padding-right: 0;
+    }
+    
+    .notes {
+        padding-left: 0;
+        border-left: none;
+        margin-top: 20px;
+    }
+}
