@@ -19,23 +19,26 @@ body {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
 }
+
 img {
-    height: 40px;       
-    width: auto;        
-    margin-right: 2px;
-    object-fit: contain; 
-  }
+  height: 40px;       
+  width: auto;        
+  margin-right: 2px;
+  object-fit: contain; 
+}
+
 .login img {
-    height: 30px;
-    width: 30px;
-    margin-right: 0px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+  height: 30px;
+  width: 30px;
+  margin-right: 0px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -43,6 +46,10 @@ img {
 
 .newline {
   display: block;
+}
+
+.newline p, .hmar {
+  color: v.$dark-gray;
 }
 
 .sameline {
@@ -57,6 +64,7 @@ img {
 
 .separate {
   @extend .sameline;
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -101,6 +109,10 @@ h3, h4, h6 {
   margin: 0;
 }
 
+h5 {
+  margin-top: 6px;
+}
+
 .green, .blue {
   margin-right: v.$unit-size;
   border-radius: 6px;
@@ -122,6 +134,11 @@ p {
   font-size: 12px;
 }
 
+.hmar {
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
 .labels {
   position: absolute;
   margin-top: 6px;
@@ -140,6 +157,13 @@ p {
 .mid {
   position: absolute;
   margin-top: 75px;
+}
+
+.black {
+  background-color: v.$black;
+  color: v.$white;
+  border-radius: v.$unit-size;
+  padding: 3px;
 }
 
 .mon {
@@ -174,7 +198,7 @@ p {
   margin: 1px;
   grid-column: 5 / 6;
   grid-row: 3 / 20;
-  background-color: v.$light-blue;
+  background-color: v.$blue;
 }
 
 .sat {
@@ -193,13 +217,18 @@ p {
 
 .platforms {
   background-color: v.$light-gray;
-  height: 265px;
+  height: 250px;
   border-radius: v.$unit-size;
   margin-top: 36px;
+  padding: 15px;
+}
+
+.subtitle {
+  margin-bottom: 12px;
 }
 
 @media (max-width: 900px) {
-    .main {
+  .main {
     width: 100vw;
   }
 
@@ -226,7 +255,7 @@ p {
   }
 
   .one {
-    height: 600px;
+    height: 625px;
   }
   
   .two {
@@ -238,7 +267,7 @@ p {
   }
 
   .four {
-    height: 600px;
+    height: 625px;
     grid-column: 1 / 2;
   }
 }

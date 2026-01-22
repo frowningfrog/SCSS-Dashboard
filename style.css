@@ -118,6 +118,10 @@ img {
   display: block;
 }
 
+.newline p, .stats p, .hmar {
+  color: #5e5e5e;
+}
+
 .sameline, .separate {
   display: flex;
 }
@@ -128,6 +132,7 @@ img {
 }
 
 .separate {
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -162,6 +167,10 @@ h3, h4, h6 {
   margin: 0;
 }
 
+h5 {
+  margin-top: 6px;
+}
+
 .green, .blue {
   margin-right: 1em;
   border-radius: 6px;
@@ -183,6 +192,11 @@ p {
   font-size: 12px;
 }
 
+.hmar {
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
 .labels {
   position: absolute;
   margin-top: 6px;
@@ -201,6 +215,13 @@ p {
 .mid {
   position: absolute;
   margin-top: 75px;
+}
+
+.black {
+  background-color: #000;
+  color: #fff;
+  border-radius: 1em;
+  padding: 3px;
 }
 
 .mon {
@@ -235,7 +256,7 @@ p {
   margin: 1px;
   grid-column: 5/6;
   grid-row: 3/20;
-  background-color: rgb(219, 195, 254);
+  background-color: #544ceb;
 }
 
 .sat {
@@ -254,9 +275,14 @@ p {
 
 .platforms {
   background-color: #f6f6f6;
-  height: 265px;
+  height: 250px;
   border-radius: 1em;
   margin-top: 36px;
+  padding: 15px;
+}
+
+.subtitle {
+  margin-bottom: 12px;
 }
 
 @media (max-width: 900px) {
@@ -281,7 +307,7 @@ p {
     margin-left: 17vw;
   }
   .one {
-    height: 600px;
+    height: 625px;
   }
   .two {
     grid-row: 3/4;
@@ -290,7 +316,7 @@ p {
     grid-column: 1/2;
   }
   .four {
-    height: 600px;
+    height: 625px;
     grid-column: 1/2;
   }
 }/*# sourceMappingURL=style.css.map */
