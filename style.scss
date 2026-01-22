@@ -84,7 +84,7 @@ body {
   margin-top: 16px;
 }
 
-h4, h6 {
+h3, h4, h6 {
   margin: 0;
 }
 
@@ -107,6 +107,82 @@ h4, h6 {
 p {
   margin: 0;
   font-size: 12px;
+}
+
+.labels {
+  position: absolute;
+  margin-top: 6px;
+}
+
+.graph {
+  height: 175px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.bar {
+  border-radius: 10px;
+}
+
+.mid {
+  position: absolute;
+  margin-top: 75px;
+}
+
+.mon {
+  margin: 1px;
+  grid-column: 1 / 2;
+  grid-row: 14 / 20;
+  background-color: v.$light-blue;
+}
+
+.tue {
+  margin: 1px;
+  grid-column: 2 / 3;
+  grid-row: 15 / 20;
+  background-color: v.$light-blue;
+}
+
+.wed {
+  margin: 1px;
+  grid-column: 3 / 4;
+  grid-row: 7 / 20;
+  background-color: v.$light-blue;
+}
+
+.thu {
+  margin: 1px;
+  grid-column: 4 / 5;
+  grid-row: 13 / 20;
+  background-color: v.$light-blue;
+}
+
+.fri {
+  margin: 1px;
+  grid-column: 5 / 6;
+  grid-row: 3 / 20;
+  background-color: v.$light-blue;
+}
+
+.sat {
+  margin: 1px;
+  grid-column: 6 / 7;
+  grid-row: 9 / 20;
+  background-color: v.$light-blue;
+}
+
+.sun {
+  margin: 1px;
+  grid-column: 7 / 8;
+  grid-row: 5 / 20;
+  background-color: v.$light-blue;
+}
+
+.platforms {
+  background-color: v.$light-gray;
+  height: 265px;
+  border-radius: v.$unit-size;
+  margin-top: 36px;
 }
 
 @media (max-width: 900px) {
