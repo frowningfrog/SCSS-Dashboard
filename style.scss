@@ -19,10 +19,16 @@ body {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
 }
-
+img {
+    height: 40px;       
+    width: auto;        
+    margin-right: 2px; 
+    object-fit: contain; 
+  }
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
