@@ -44,16 +44,17 @@
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-color: #e5e5e5;
   margin: 0;
   padding: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 .main {
-  margin: 1em;
-  margin-left: 3em;
-  margin-right: 3em;
+  width: 932px;
 }
 
 .logo {
@@ -61,13 +62,22 @@ body {
   font-weight: bold;
 }
 
-.box, .boxt {
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tags {
+  display: flex;
+}
+
+.box, .four, .three, .two, .one {
   margin-top: 1em;
   margin-right: 1em;
-  width: 333px;
-  height: 333px;
   background-color: #fff;
   border-radius: 1em;
+  min-width: 300px;
+  min-height: 300px;
 }
 
 .boxstuff {
@@ -75,6 +85,66 @@ body {
   position: absolute;
 }
 
-.boxt {
-  height: 666px;
+.one {
+  grid-row: 1/3;
+}
+
+.four {
+  grid-column: 2/4;
+}
+
+h4, h6 {
+  margin: 0;
+}
+
+.green, .blue {
+  margin-right: 1em;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.green {
+  background-color: #dcffd7;
+  color: #235223;
+}
+
+.blue {
+  background-color: #d7ecff;
+  color: #233652;
+}
+
+@media (max-width: 900px) {
+  .main {
+    width: 100vw;
+  }
+  .container {
+    margin-left: 10vw;
+  }
+  .three {
+    grid-column: 2/3;
+  }
+  .four {
+    grid-column: 1/3;
+  }
+}
+@media (max-width: 630px) {
+  .main {
+    width: 100vw;
+  }
+  .container {
+    margin-left: 17vw;
+  }
+  .one {
+    height: 600px;
+  }
+  .two {
+    grid-row: 3/4;
+  }
+  .three {
+    grid-column: 1/2;
+  }
+  .four {
+    height: 600px;
+    grid-column: 1/2;
+  }
 }/*# sourceMappingURL=style.css.map */

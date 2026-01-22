@@ -2,33 +2,126 @@
 @use 'vars' as v;
 
 body {
-  font-family: v.$verdana-family;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: v.$my-gray;
   margin: 0;
   padding: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
+
 .main {
-  margin: v.$unit-size;
-  margin-left: 3em;
-  margin-right: 3em;
+  width: 932px;
 }
+
 .logo {
   font-size: 24px;
   font-weight: bold;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tags {
+  display: flex;
+}
+
 .box {
   margin-top: v.$unit-size;
   margin-right: v.$unit-size;
-  width: v.$box-size;
-  height: v.$box-size;
   background-color: #fff;
   border-radius: v.$unit-size;
+  min-width: 300px;
+  min-height: 300px;
 }
+
 .boxstuff {
   margin: v.$unit-size;
   position: absolute;
 }
-.boxt {
+
+.one {
   @extend .box;
-  height: v.$box-size*2;
+  grid-row: 1 / 3;
+}
+
+.two {
+  @extend .box;
+}
+
+.three {
+  @extend .box;
+}
+
+.four {
+  @extend .box;
+  grid-column: 2 / 4;
+}
+
+h4, h6 {
+  margin: 0;
+}
+
+.green, .blue {
+  margin-right: v.$unit-size;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.green {
+  background-color: #dcffd7;
+  color: #235223;
+}
+
+.blue {
+  background-color: #d7ecff;
+  color: #233652;
+}
+
+@media (max-width: 900px) {
+    .main {
+    width: 100vw;
+  }
+
+  .container {
+    margin-left: 10vw;
+  }
+
+  .three {
+    grid-column: 2 / 3;
+  }
+
+  .four {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width: 630px) {
+  .main {
+    width: 100vw;
+  }
+
+  .container {
+    margin-left: 17vw;
+  }
+
+  .one {
+    height: 600px;
+  }
+  
+  .two {
+    grid-row: 3 / 4;
+  }
+
+  .three {
+    grid-column: 1 / 2;
+  }
+
+  .four {
+    height: 600px;
+    grid-column: 1 / 2;
+  }
 }
