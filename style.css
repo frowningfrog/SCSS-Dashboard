@@ -83,6 +83,15 @@ img {
      object-fit: contain;
 }
 
+.container .login img {
+  height: 30px;
+  width: 30px;
+  margin-right: 0px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
