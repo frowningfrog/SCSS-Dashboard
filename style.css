@@ -11,13 +11,22 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.logo img {
+  height: 30px;
+  width: auto;
+  margin-right: 0px;
+}
+
 .headbar .logo {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #333333;
 }
 
 .headbar .nav-links {
+  display: flex;
   gap: 15px;
 }
 
@@ -43,6 +52,23 @@
   width: 200px;
 }
 
+.headbar .login {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.headbar .login img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   background-color: #e5e5e5;
@@ -61,8 +87,26 @@ body {
 }
 
 .logo {
-  font-size: 24px;
+  display: flex;
+  align-items: center;
   font-weight: bold;
+}
+
+img {
+  height: 40px;
+  width: auto;
+  margin-right: 2px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.login img {
+  height: 30px;
+  width: 30px;
+  margin-right: 0px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .container {

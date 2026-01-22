@@ -10,12 +10,20 @@
     border-radius: 2em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.logo img {
+    height: 30px;
+    width: auto;
+    margin-right: 0px;
+}
 .headbar .logo {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #333333;
 }
 .headbar .nav-links {
+    display: flex;
     gap: 15px;
 }
 .headbar .nav-links a {
@@ -36,4 +44,18 @@
     border-radius: 20px;
     font-size: 1rem;
     width: 200px;
+}
+.headbar .login {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+}
+.headbar .login img {
+    height: 30px;
+    width: 30px;        
+    border-radius: 50%; 
+    object-fit: cover;  
+    display: block;
 }
