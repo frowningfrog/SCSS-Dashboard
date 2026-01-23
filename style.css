@@ -71,7 +71,8 @@
 
 body {
   font-family: "Rubik", sans-serif;
-  background-color: #e5e5e5;
+  position: relative;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
   margin: 0;
   padding: 0;
   display: grid;
@@ -124,6 +125,14 @@ img {
 
 .sameline, .separate {
   display: flex;
+}
+
+.chart-container {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-top: 15px;
+  margin-left: 0;
 }
 
 .stats {

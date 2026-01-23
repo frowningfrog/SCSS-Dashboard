@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +29,7 @@
             <img src="Image/profile-image.jpg" alt="Profile Picture">
             </a>
         </div>
-        </div>
+    </div>
         <div class="container">
             <div class="one">
                 <div class="boxstuff">
@@ -95,8 +98,22 @@
                         <div class="stats"><p>Total</p>
                         <p>activity</p></div>
                     </div>
+            <div class="two"> <div class="boxstuff">
+            <h4>Progress Statistics</h4>
+            
+            <div class="sameline">
+                <p class="large">64%</p>
+                <div class="stats">
+                    <p>Total</p>
+                    <p>activity</p>
                 </div>
+            </div> 
+
+            <div class="chart-container">
+                <canvas id="loginChart"></canvas>
             </div>
+        </div>
+    </div>
             <div class="three">
                 <div class="boxstuff">
                     <div class="sameline">
@@ -112,5 +129,35 @@
             </div>
         </div>
     </div>
+     <script>
+    const ctx = document.getElementById('loginChart').getContext('2d');
+    
+    new Chart(ctx, {
+        type: 'line', 
+        data: {
+            labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'], 
+            datasets: [{
+                label: 'Login Clicks',
+                data: [12, 19, 3, 5, 2, 3, 10], 
+                borderColor: '#4bc0c0',      
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderWidth: 2,
+                tension: 0.4,                
+                pointRadius: 0               
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,      
+            plugins: {
+                legend: { display: false }   
+            },
+            scales: {
+                x: { display: false },       
+                y: { display: false }        
+            }
+        }
+    });
+</script>
 </body>
 </html>
