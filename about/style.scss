@@ -1,0 +1,32 @@
+@use "../Main-page/headbar";
+@use '../Main-page/vars' as v;
+
+body {
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  background: v.$my-gradient;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  width: 900px;
+  height: 100vh;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.content {
+    margin: 2em;
+}
+
+@media (max-width: 900px) {
+  .main {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 630px) {
+  .main {
+    width: 100vw;
+  }
+}

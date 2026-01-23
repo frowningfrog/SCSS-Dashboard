@@ -26,14 +26,14 @@
                 </div>
                 <a href="#">About</a>
                 <a href="#">Services</a>
-                <a href="#">Contact</a>
+                <a href="../contact/contact.html">Contact</a>
             </nav>
-        <div class="actions">
-            <a href="../Login-Page/login.html" class="login">
-            <img src="../Image/profile-image.jpg" alt="Profile Picture">
-            </a>
+            <div class="actions">
+                <a href="../Login-Page/login.html" class="login">
+                <img src="../Image/profile-image.jpg" alt="Profile Picture">
+                </a>
+            </div>
         </div>
-    </div>
         <div class="container">
             <div class="one">
                 <div class="boxstuff">
@@ -126,53 +126,12 @@
                     <div class="separate">
                         <h3>Schedule</h3>
                         <div class="sameline">
-                            <button class="btnswitch">◁</button>
-                            <h5 class="subtitle">January</h5>
-                            <button class="btnswitch">▷</button>
+                            <button class="btnswitch" id="left" onclick="lb()">◁</button>
+                            <div id="month"></div>
+                            <button class="btnswitch" id="right" onclick="rb()">▷</button>
                         </div>
                     </div>
-                    <div class="sameline" id="boxrow">
-                        <div class="innerbox inwidth">
-                            <div>
-                                <p>24th</p>
-                                <h5 class="subtitle">SASS Dashboard</h5>
-                                <div class="sameline">
-                                    <h6 class="blue">SASS</h6>
-                                </div>
-                            </div>
-                            <div class="sameline">
-                                <img src="../Image/tron.png">
-                                <div class="newline"><h5 class="mentor">Tron</h5><p>Security program</p></div>
-                            </div>
-                        </div>
-                        <div class="innerbox inwidth" id="mid">
-                            <div>
-                                <div class="sameline separate"><p>28th</p><p id="orange">💿 derezzed</p></div>
-                                <h5 class="subtitle">Single/one responsive page using Bootstrap</h5>
-                                <div class="sameline">
-                                    <h6 class="blue">Bootstrap</h6>
-                                </div>
-                            </div>
-                            <div class="sameline">
-                                <img src="../Image/ram.png">
-                                <div class="newline"><h5 class="mentor">Ram</h5><p id="light">Actuarial program</p></div>
-                            </div>
-                        </div>
-                        <div class="innerbox inwidth">
-                            <div>
-                                <p>31st</p>
-                                <h5 class="subtitle">Netflix replica using Tailwind CSS</h5>
-                                <div class="sameline">
-                                    <h6 class="blue">Tailwind</h6>
-                                </div>
-                            </div>
-                            <div class="sameline">
-                                <img src="../Image/mcp.png">
-                                <div class="newline"><h5 class="mentor">MCP</h5><p>Former chess alg</p></div>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    <div id="schedulecontent"></div>                    
                 </div>
             </div>
         </div>
@@ -207,16 +166,6 @@
         }
     });
 </script>
-<script>
-const homeLink = document.querySelector('.home-link');
-const bubble = document.querySelector('.note-bubble');
-homeLink.addEventListener('click', function(event) {
-    event.preventDefault(); 
-    bubble.classList.add('show');
-    setTimeout(function() {
-        bubble.classList.remove('show');
-    }, 2000);
-});
-</script>
+<script src="months.js"></script>
 </body>
 </html>
