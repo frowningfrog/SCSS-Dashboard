@@ -99,6 +99,23 @@ body {
   margin: 2em;
 }
 
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin: 3em;
+}
+
+button {
+  background-color: rgb(219, 195, 254);
+  border-radius: 1em;
+}
+
+button:hover {
+  background-color: #544ceb;
+  cursor: pointer;
+  color: #fff;
+}
+
 @media (max-width: 900px) {
   .main {
     width: 100vw;
