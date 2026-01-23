@@ -49,6 +49,14 @@ img {
   display: flex;
 }
 
+.chart-container {
+    display: block;
+    width: 100%; 
+    height: 100px; 
+    margin-top: 15px;
+    margin-left: 0; 
+}
+
 .stats {
   @extend .newline;
   margin-top: 26px;

@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +29,7 @@
             <img src="Image/profile-image.jpg" alt="Profile Picture">
             </a>
         </div>
-        </div>
+    </div>
         <div class="container">
             <div class="one">
                 <div class="boxstuff">
@@ -41,16 +44,22 @@
                     </div>
                 </div>
             </div>
-            <div class="two">
-                <div class="boxstuff">
-                    <h4>Progress Statistics</h4>
-                    <div class="sameline">
-                        <p class="large">64%</p>
-                        <div class="stats"><p>Total</p>
-                        <p>activity</p></div>
-                    </div>
+            <div class="two"> <div class="boxstuff">
+            <h4>Progress Statistics</h4>
+            
+            <div class="sameline">
+                <p class="large">64%</p>
+                <div class="stats">
+                    <p>Total</p>
+                    <p>activity</p>
                 </div>
+            </div> 
+
+            <div class="chart-container">
+                <canvas id="loginChart"></canvas>
             </div>
+        </div>
+    </div>
             <div class="three">
                 <div class="boxstuff">
                     <div class="sameline">
@@ -66,5 +75,35 @@
             </div>
         </div>
     </div>
+     <script>
+    const ctx = document.getElementById('loginChart').getContext('2d');
+    
+    new Chart(ctx, {
+        type: 'line', // A line chart looks best for "Activity"
+        data: {
+            labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'], // Days of week
+            datasets: [{
+                label: 'Login Clicks',
+                data: [12, 19, 3, 5, 2, 3, 10], // Example data points
+                borderColor: '#4bc0c0',      // Teal color
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderWidth: 2,
+                tension: 0.4,                // Makes lines curvy
+                pointRadius: 0               // Hides dots for a cleaner look
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,      // IMPORTANT: Lets it resize to the flexbox
+            plugins: {
+                legend: { display: false }   // Hides the label to save space
+            },
+            scales: {
+                x: { display: false },       // Hides X axis grid
+                y: { display: false }        // Hides Y axis grid
+            }
+        }
+    });
+</script>
 </body>
 </html>
