@@ -178,10 +178,38 @@ img {
   grid-row: 1/3;
 }
 
-.info {
+.info .three {
+  display: block;
+  justify-content: flex-end;
   margin-left: 1em;
   color: #5e5e5e;
-  font-weight: 300;
+  font-weight: 500;
+  align-items: flex-end;
+}
+
+.details {
+  margin-top: 6px;
+  color: #5e5e5e;
+  font-size: 14px;
+}
+
+.outside {
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 500;
+  margin-top: 12px;
+  background-color: rgb(193, 252, 246);
+  color: #fff;
+  border: none;
+  border-radius: 2em;
+  padding: 16px 32px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.outside:hover {
+  background-color: rgb(243.0416666667, 143.9583333333, 159.3333333333);
 }
 
 .four {

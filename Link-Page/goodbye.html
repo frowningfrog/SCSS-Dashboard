@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Goodbye Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../Link-Page/link-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="headbar">
+        <nav class="nav-links">
+            <a href="https://flexboxfroggy.com/">Click for a fun time!</a>
+        </nav>
+    <div class="goodbye-container">
+        <h1>Thank You for Visiting Our Portfolio!</h1>
+        <p>We appreciate your time and interest in our work.</p>
+        <p>If you have any questions or would like to get in touch, please feel free to contact us.</p>
+    </div>
+   <button class="back-link"><a href="../Main-page/index.html">Return to Main Page</a></button>
+<div class="bouncy-ball"></div>
+<script>
+    const ball = document.querySelector('.bouncy-ball');
+    ball.addEventListener('click', function() {
+        ball.classList.toggle('paused');
+    });
+</script>
+</body>
+</html>
