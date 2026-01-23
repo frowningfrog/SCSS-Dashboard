@@ -45,8 +45,12 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.newline {
+@mixin block {
   display: block;
+}
+
+.newline {
+  @include block;
 }
 
 .newline p, .hmar {
@@ -59,10 +63,11 @@ img {
 
 .sameline img {
   margin-right: 12px;
+  border-radius: 50%;
 }
 
 .chart-container {
-    display: block;
+    @include block;
     width: 100%; 
     height: 100px; 
     margin-top: 15px;
@@ -96,6 +101,12 @@ img {
 
 .btnswitch {
   background-color: v.$white;
+  border-color: v.$light-gray;
+  border-radius: 1em;
+}
+
+.btnswitch:hover {
+  background-color: v.$light-blue
 }
 
 .one {
@@ -130,6 +141,11 @@ h5 {
   margin-top: 6px;
 }
 
+.mentor {
+  margin: 0;
+  margin-top: 6px;
+}
+
 .green, .blue {
   margin-right: v.$unit-size;
   border-radius: 6px;
@@ -144,6 +160,13 @@ h5 {
 .blue {
   background-color: #d7ecff;
   color: #233652;
+}
+
+#orange {
+  background-color: #ff9900;
+  margin: 0;
+  padding: 2px;
+  border-radius: 1em;
 }
 
 p {
@@ -232,16 +255,42 @@ p {
   background-color: v.$light-blue;
 }
 
-.platforms {
+.innerbox {
   background-color: v.$light-gray;
-  height: 250px;
   border-radius: v.$unit-size;
-  margin-top: 36px;
   padding: 15px;
+  height: 195px;
+}
+
+.wide .separate {
+  display: flex;
+}
+
+.inwidth {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.platforms {
+  margin-top: 36px;
+  height: 250px;
 }
 
 .subtitle {
   margin-bottom: 12px;
+}
+
+#mid {
+  margin-left: 12px;
+  margin-right: 12px;
+  background-color: v.$blue;
+  color: v.$light-gray;
+}
+
+#light {
+  color: v.$light-gray;
 }
 
 @media (max-width: 900px) {
@@ -286,5 +335,20 @@ p {
   .four {
     height: 625px;
     grid-column: 1 / 2;
+  }
+
+  .inwidth {
+    height: 150px;
+  }
+
+  #mid {
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  #boxrow {
+    @include block;
+    width: 225px;
   }
 }

@@ -129,6 +129,7 @@ img {
 
 .sameline img, .separate img {
   margin-right: 12px;
+  border-radius: 50%;
 }
 
 .chart-container {
@@ -164,6 +165,12 @@ img {
 
 .btnswitch {
   background-color: #fff;
+  border-color: #f6f6f6;
+  border-radius: 1em;
+}
+
+.btnswitch:hover {
+  background-color: rgb(219, 195, 254);
 }
 
 .one {
@@ -188,6 +195,11 @@ h5 {
   margin-top: 6px;
 }
 
+.mentor {
+  margin: 0;
+  margin-top: 6px;
+}
+
 .green, .blue {
   margin-right: 1em;
   border-radius: 6px;
@@ -202,6 +214,13 @@ h5 {
 .blue {
   background-color: #d7ecff;
   color: #233652;
+}
+
+#orange {
+  background-color: #ff9900;
+  margin: 0;
+  padding: 2px;
+  border-radius: 1em;
 }
 
 p {
@@ -290,16 +309,42 @@ p {
   background-color: rgb(219, 195, 254);
 }
 
-.platforms {
+.innerbox {
   background-color: #f6f6f6;
-  height: 250px;
   border-radius: 1em;
-  margin-top: 36px;
   padding: 15px;
+  height: 195px;
+}
+
+.wide .separate {
+  display: flex;
+}
+
+.inwidth {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.platforms {
+  margin-top: 36px;
+  height: 250px;
 }
 
 .subtitle {
   margin-bottom: 12px;
+}
+
+#mid {
+  margin-left: 12px;
+  margin-right: 12px;
+  background-color: #544ceb;
+  color: #f6f6f6;
+}
+
+#light {
+  color: #f6f6f6;
 }
 
 @media (max-width: 900px) {
@@ -335,5 +380,17 @@ p {
   .four {
     height: 625px;
     grid-column: 1/2;
+  }
+  .inwidth {
+    height: 150px;
+  }
+  #mid {
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  #boxrow {
+    display: block;
+    width: 225px;
   }
 }/*# sourceMappingURL=style.css.map */
