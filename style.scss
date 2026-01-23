@@ -3,7 +3,8 @@
 
 body {
   font-family: "Rubik", sans-serif;
-  background-color: v.$my-gray;
+  position: relative;
+  background: v.$my-gradient;
   margin: 0;
   padding: 0;
   display: grid;
