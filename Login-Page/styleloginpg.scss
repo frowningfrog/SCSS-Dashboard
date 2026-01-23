@@ -1,3 +1,5 @@
+@use 'loginvars' as q;
+
 body {
   display: flex;
   justify-content: center;
@@ -5,8 +7,8 @@ body {
   min-height: 60vh;
   margin: 0; 
   position: relative;
-  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
-  font-family: 'Arial', sans-serif;
+  background: q.$my-gradient;
+  font-family: q.$my-font;
 }
 .full {
     border: 2px solid #ddd;
