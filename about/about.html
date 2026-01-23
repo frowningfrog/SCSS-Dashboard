@@ -24,30 +24,27 @@
                 <a href="../contact/contact.html">Contact</a>
             </nav>
             <audio id="bg-music" loop>
-        <source src="your-music-file.mp3" type="audio/mpeg">
-    </audio>
-
-    <button id="music-btn" onclick="toggleMusic()">Play Music 🎵</button>
-
-    <script>
-        const music = document.getElementById('bg-music');
-        const btn = document.getElementById('music-btn');
-
-        function toggleMusic() {
-            if (music.paused) {
-                music.play();
-                btn.innerText = "Pause Music ⏸️";
-            } else {
-                music.pause();
-                btn.innerText = "Play Music 🎵";
-            }
-        }
-        window.onload = function() {
-            music.play().catch(error => {
-                console.log("Autoplay was prevented by the browser. User interaction required.");
-            });
-        };
-    </script>
+                <source src="../mp3/dreamy-times-358804.mp3" type="audio/mpeg">
+            </audio>
+                <button id="music-btn" onclick="toggleMusic()">Play Music 🎵</button>
+                <script>
+                    const music = document.getElementById('bg-music');
+                    const btn = document.getElementById('music-btn');
+                    function toggleMusic() {
+                        if (music.paused) {
+                            music.play();
+                            btn.innerText = "Pause Music ⏸️";
+                        } else {
+                            music.pause();
+                            btn.innerText = "Play Music 🎵";
+                        }
+                    }
+                    window.onload = function() {
+                        music.play().catch(error => {
+                            console.log("Autoplay was prevented by the browser. User interaction required.");
+                        });
+                    };
+                </script>
             <div class="actions">
                 <a href="../Login-Page/login.html" class="login">
                 <img src="../Image/profile-image.jpg" alt="Profile Picture">
