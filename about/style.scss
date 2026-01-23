@@ -19,6 +19,23 @@ body {
     margin: 2em;
 }
 
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin: 3em;
+}
+
+button {
+    background-color: v.$light-blue;
+    border-radius: 1em;
+}
+
+button:hover {
+    background-color: v.$blue;
+    cursor: pointer;
+    color: v.$white;
+}
+
 @media (max-width: 900px) {
   .main {
     width: 100vw;
