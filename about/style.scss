@@ -5,10 +5,10 @@ body {
   font-family: "Rubik", sans-serif;
   position: relative;
   background: v.$my-gradient;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  display: flex;
   justify-content: center;
+  width: 900px;
   height: 100vh;
   font-optical-sizing: auto;
   font-weight: 300;
