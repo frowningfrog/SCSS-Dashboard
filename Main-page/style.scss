@@ -1,6 +1,15 @@
 @use 'headbar';
 @use 'vars' as v;
 
+@mixin day {
+  margin: 1px;
+  background-color: v.$light-blue;
+}
+
+@mixin block {
+  display: block;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   position: relative;
@@ -46,7 +55,7 @@ img {
 }
 
 .newline {
-  display: block;
+  @include block;
 }
 
 .newline p, .hmar {
@@ -57,8 +66,13 @@ img {
   display: flex;
 }
 
+.sameline img {
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
 .chart-container {
-    display: block;
+    @include block;
     width: 100%; 
     height: 100px; 
     margin-top: 30px;
@@ -92,6 +106,13 @@ img {
 
 .btnswitch {
   background-color: v.$white;
+  border-color: v.$light-gray;
+  border-radius: 1em;
+}
+
+.btnswitch:hover {
+  background-color: v.$light-blue;
+  cursor: pointer;
 }
 
 .one {
@@ -132,6 +153,11 @@ h5 {
   margin-top: 6px;
 }
 
+.mentor {
+  margin: 0;
+  margin-top: 6px;
+}
+
 .green, .blue {
   margin-right: v.$unit-size;
   border-radius: 6px;
@@ -146,6 +172,13 @@ h5 {
 .blue {
   background-color: #d7ecff;
   color: #233652;
+}
+
+#orange {
+  background-color: #ff9900;
+  margin: 0;
+  padding: 2px;
+  border-radius: 1em;
 }
 
 p {
@@ -186,64 +219,84 @@ p {
 }
 
 .mon {
-  margin: 1px;
+  @include day;
   grid-column: 1 / 2;
   grid-row: 14 / 20;
-  background-color: v.$light-blue;
 }
 
 .tue {
-  margin: 1px;
+  @include day;
   grid-column: 2 / 3;
   grid-row: 15 / 20;
-  background-color: v.$light-blue;
 }
 
 .wed {
-  margin: 1px;
+  @include day;
   grid-column: 3 / 4;
   grid-row: 7 / 20;
-  background-color: v.$light-blue;
 }
 
 .thu {
-  margin: 1px;
+  @include day;
   grid-column: 4 / 5;
   grid-row: 13 / 20;
-  background-color: v.$light-blue;
 }
 
 .fri {
-  margin: 1px;
+  @include day;
   grid-column: 5 / 6;
   grid-row: 3 / 20;
   background-color: v.$blue;
 }
 
 .sat {
-  margin: 1px;
+  @include day;
   grid-column: 6 / 7;
   grid-row: 9 / 20;
-  background-color: v.$light-blue;
 }
 
 .sun {
-  margin: 1px;
+  @include day;
   grid-column: 7 / 8;
   grid-row: 5 / 20;
-  background-color: v.$light-blue;
+}
+
+.innerbox {
+  background-color: v.$light-gray;
+  border-radius: v.$unit-size;
+  padding: 15px;
+  height: 195px;
+}
+
+.wide .separate {
+  display: flex;
+}
+
+.inwidth {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .platforms {
-  background-color: v.$light-gray;
-  height: 250px;
-  border-radius: v.$unit-size;
   margin-top: 36px;
-  padding: 15px;
+  height: 250px;
 }
 
 .subtitle {
   margin-bottom: 12px;
+}
+
+#mid {
+  margin-left: 12px;
+  margin-right: 12px;
+  background-color: v.$blue;
+  color: v.$light-gray;
+}
+
+#light {
+  color: v.$light-gray;
 }
 
 @media (max-width: 900px) {
@@ -288,5 +341,20 @@ p {
   .four {
     height: 625px;
     grid-column: 1 / 2;
+  }
+
+  .inwidth {
+    height: 150px;
+  }
+
+  #mid {
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  #boxrow {
+    @include block;
+    width: 225px;
   }
 }

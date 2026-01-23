@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>SCSS dashboard</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -53,13 +54,13 @@
                         <div class="bar sun"></div>
                     </div>
                     <pre class="labels"> Mon  Tue  Wed  Thu  Fri  Sat  Sun</pre>
-                    <div class="platforms">
+                    <div class="innerbox platforms">
                         <h4 class="subtitle">By platform</h4>
                         <div class="sameline">
                             <img src="../Image/Logo2.jpg">
                             <div class="separate">
                                 <div class="newline"><p>8 Lessons</p>
-                                <h5>Mt Crescent</5></div>
+                                <h5>Mt Crescent</h5></div>
                                 <div class="sameline"><h5>12.5</h5><p class="hmar">h</p></div>
                             </div>
                         </div>
@@ -67,7 +68,7 @@
                             <img src="../Image/t.png">
                             <div class="separate">
                                 <div class="newline"><p>5 Lessons</p>
-                                <h5>T hammer</5></div>
+                                <h5>T hammer</h5></div>
                                 <div class="sameline"><h5>6.8</h5><p class="hmar">h</p></div>
                             </div>
                         </div>
@@ -75,7 +76,7 @@
                             <img src="../Image/e.png">
                             <div class="separate">
                                 <div class="newline"><p>3 Lessons</p>
-                                <h5>Entra Ki</5></div>
+                                <h5>Entra Ki</h5></div>
                                 <div class="sameline"><h5>4.2</h5><p class="hmar">h</p></div>
                             </div>
                         </div>
@@ -83,7 +84,7 @@
                             <img src="../Image/c.png">
                             <div class="separate">
                                 <div class="newline"><p>2 Lessons</p>
-                                <h5>codex</5></div>
+                                <h5>codex</h5></div>
                                 <div class="sameline"><h5>2.5</h5><p class="hmar">h</p></div>
                             </div>
                         </div>
@@ -113,8 +114,57 @@
                 </div>
             </div>
             <div class="four">
-                <div class="boxstuff">
-                    <h3>Class schedule</h3>
+                <div class="boxstuff wide">
+                    <div class="separate">
+                        <h3>Schedule</h3>
+                        <div class="sameline">
+                            <button class="btnswitch">◁</button>
+                            <h5 class="subtitle">January</h5>
+                            <button class="btnswitch">▷</button>
+                        </div>
+                    </div>
+                    <div class="sameline" id="boxrow">
+                        <div class="innerbox inwidth">
+                            <div>
+                                <p>24th</p>
+                                <h5 class="subtitle">SASS Dashboard</h5>
+                                <div class="sameline">
+                                    <h6 class="blue">SASS</h6>
+                                </div>
+                            </div>
+                            <div class="sameline">
+                                <img src="../Image/tron.png">
+                                <div class="newline"><h5 class="mentor">Tron</h5><p>Security program</p></div>
+                            </div>
+                        </div>
+                        <div class="innerbox inwidth" id="mid">
+                            <div>
+                                <div class="sameline separate"><p>28th</p><p id="orange">💿 derezzed</p></div>
+                                <h5 class="subtitle">Single/one responsive page using Bootstrap</h5>
+                                <div class="sameline">
+                                    <h6 class="blue">Bootstrap</h6>
+                                </div>
+                            </div>
+                            <div class="sameline">
+                                <img src="../Image/ram.png">
+                                <div class="newline"><h5 class="mentor">Ram</h5><p id="light">Actuarial program</p></div>
+                            </div>
+                        </div>
+                        <div class="innerbox inwidth">
+                            <div>
+                                <p>31st</p>
+                                <h5 class="subtitle">Netflix replica using Tailwind CSS</h5>
+                                <div class="sameline">
+                                    <h6 class="blue">Tailwind</h6>
+                                </div>
+                            </div>
+                            <div class="sameline">
+                                <img src="../Image/mcp.png">
+                                <div class="newline"><h5 class="mentor">MCP</h5><p>Former chess alg</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
