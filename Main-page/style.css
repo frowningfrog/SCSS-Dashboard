@@ -225,6 +225,20 @@ img {
   grid-row: 1/3;
 }
 
+.three .boxstuff {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+.three .details {
+  margin-top: auto;
+}
+
+.three .outside {
+  margin-top: auto;
+}
+
 .info .three {
   display: block;
   justify-content: flex-end;
